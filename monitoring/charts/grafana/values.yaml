@@ -10,7 +10,7 @@ grafana:
     tag: latest
   service:
     type: NodePort
-    nodePort: 30010
+    nodePort: 32000
 
 
 

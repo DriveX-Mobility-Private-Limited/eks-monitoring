@@ -16,8 +16,7 @@ loki:
     jsonData: "{}"
     uid: ""
   service:
-    type: NodePort        # Change service type to NodePort
-    nodePort: 31000       # Specify the NodePort for Loki (optional, can be auto-assigned)
-
+    type: NodePort
+    nodePort: 31000
 podSecurityPolicy:
   enabled: false
