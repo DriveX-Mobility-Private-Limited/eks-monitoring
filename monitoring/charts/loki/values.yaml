@@ -12,9 +12,9 @@ loki:
       path: /ready
       port: http-metrics
     initialDelaySeconds: 45
-  datasource:
-    jsonData: "{}"
-    uid: ""
+  # datasource:
+  #   jsonData: "{}"
+  #   uid: ""
   service:
     type: NodePort
     nodePort: 31000
