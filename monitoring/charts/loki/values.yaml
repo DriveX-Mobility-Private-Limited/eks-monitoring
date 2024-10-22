@@ -1,7 +1,8 @@
 loki:
   enabled: true
-  isDefault: true
-  url: http://{{(include "loki.serviceName" .)}}:{{ .Values.loki.service.port }}
+  service:
+    type: NodePort
+    nodePort: 31000
   readinessProbe:
     httpGet:
       path: /ready
@@ -12,11 +13,3 @@ loki:
       path: /ready
       port: http-metrics
     initialDelaySeconds: 45
-  # datasource:
-  #   jsonData: "{}"
-  #   uid: ""
-  service:
-    type: NodePort
-    nodePort: 31000
-podSecurityPolicy:
-  enabled: false
